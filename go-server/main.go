@@ -8,7 +8,7 @@ import (
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hi there, I love %s from server %s", r.URL.Path[1:], os.Getenv("pod_name"))
+	fmt.Fprintf(w, "Hi there, route opened: %s on server: %s", r.URL.Path[1:], os.Getenv("pod_name"))
 }
 
 func main() {
